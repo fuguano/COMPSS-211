@@ -1,4 +1,4 @@
-# Git Fundamentals
+# Git Basics
 ---
 **_Learning Objectives_:**  
 1. Understand why we use version control and Git
@@ -23,6 +23,55 @@
 This is why we use version control. **Version control** is a system that manages and records changes to files over time. The most commonly used version control system is called **Git** (others include Mercurial and SVN). Git keeps track of the differences in the repository each time you make a change. The entire history of the repository is tracked by Git. If you realize you made a mistake in your code, you can always roll it back to a previous time point.
 
 If you have used Google Docs, you likely have already used version control. Google Docs now tracks every change that every user makes, and allows you to go to any version of the document. Git allows us to do the same thing in complex code environments.
+
+## Understanding Git Concepts: HEAD, origin, and main
+
+Before we dive into the workflow, let's understand some key Git concepts that you'll encounter throughout this lesson.
+
+### Visual Git Repository Structure
+```
+Remote Repository (GitHub)
+         ↓
+    origin/main  ← Points to latest commit on remote main branch
+         ↓
+Local Repository
+         ↓
+      main      ← Your local main branch
+         ↓
+      HEAD      ← Points to your current location/commit
+```
+
+### **HEAD**
+- HEAD is a pointer that shows where you currently are in your repository
+- Usually points to the latest commit on your current branch
+- When you make a new commit, HEAD moves forward to point to it
+- Think of HEAD as "You are here" marker
+
+### **origin**
+- `origin` is the default name for your remote repository (usually on GitHub)
+- When you clone a repository, Git automatically names the remote "origin"
+- Commands like `git push origin main` push to the remote repository
+- You can have multiple remotes, but origin is the main one
+
+### **main**
+- `main` is the name of the default branch in your repository
+- Previously called "master" in older repositories
+- This is where your stable, production-ready code typically lives
+- Other branches are created from main and eventually merged back
+
+### The Relationship Between Them
+```
+GitHub (Remote)     →     origin/main
+      ↓
+Your Computer       →     main (local branch)
+      ↓
+Current Position    →     HEAD
+```
+
+When you:
+- `git push`: Sends your local commits to origin
+- `git pull`: Brings changes from origin to your local branch
+- `git commit`: Moves HEAD forward to the new commit
 
 ## Git Workflows: Personal Workflow
 There are a variety of workflows you may employ when using Git to track your changes. The most common, particularly for academic settings, is the **personal workflow**.
@@ -57,6 +106,8 @@ Let's go through the process of making changes to a repository, step by step.<br
  
 ### 1. **Creating a Repository**
 To create a new repository on GitHub, click on this [link](https://docs.github.com/en/get-started/quickstart/create-a-repo) and follow the instructions. Make sure to tick the `Add a README file` box under "Initialize this repository with". Click on `Create repository`. You now have a remote repository (on GitHub's servers), but **not** a local repository.<br>
+
+Alternatively, you can create a repository locally first using `git init`. This command initializes a new Git repository in your current directory, creating a `.git` folder that contains all the version control information.<br>
 
 🥊**Challenge**: Let's create a new repository under your account. <br>
 
@@ -99,7 +150,51 @@ Let's check the GitHub page to see if the changes you made manifest on the websi
 ### 9. Make Edits and Commits on GitHub Directly
 Let's make changes to the remote repository by making changes GitHub page directly. <br>
 
+### 10. Pull Changes from Remote
+When you make changes on GitHub directly, your local repository doesn't automatically know about them. Use `git pull` to bring those changes to your local machine:<br>
+```bash
+git pull origin main
+```
+
 So, even in the personal workflow, there's a lot of individual steps needed just to make changes to the codebase. This becomes a little bit more complicated when multiple people are making changes at the same time, which requires a slightly different workflow.<br>
+
+## Additional Essential Git Commands
+
+Now that you understand the basic workflow, let's explore some additional commands that will help you work more effectively with Git.
+
+### **git log** - Viewing Commit History
+The `git log` command shows you the commit history of your repository. It displays information about each commit including the commit hash, author, date, and commit message.
+```bash
+git log                    # Shows full commit history
+git log --oneline         # Shows condensed one-line per commit
+git log --graph           # Shows branch structure visually
+```
+
+### **git diff** - Viewing Changes
+The `git diff` command shows the differences between various states of your repository:
+```bash
+git diff                  # Shows unstaged changes
+git diff --staged         # Shows staged changes (ready to commit)
+git diff HEAD~1           # Shows changes since last commit
+```
+
+### **git reset** - Undoing Changes
+The `git reset` command allows you to undo changes in different ways:
+```bash
+git reset <file>          # Unstage a file (remove from staging area)
+git reset --soft HEAD~1   # Undo last commit, keep changes staged
+git reset --hard HEAD~1   # Undo last commit and discard changes (careful!)
+```
+
+⚠️ **Warning:** `git reset --hard` permanently deletes changes. Use with caution!
+
+### **git checkout** - Switching and Restoring
+The `git checkout` command has multiple uses:
+```bash
+git checkout <branch>     # Switch to a different branch
+git checkout <file>       # Restore file to last committed state
+git checkout <commit>     # View repository at specific commit
+```
 
 💡 **Tip** Do `git pull` before working on a repository so that your local repo is up to date with your remote repo. 
 
