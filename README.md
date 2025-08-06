@@ -1,9 +1,9 @@
-# COMPSS-211a
+# COMPSS-211
 
 [![Datahub](https://img.shields.io/badge/launch-datahub-blue)](https://github.com/dlab-berkeley/R-LLMs-Exploratory-Research/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Fdlab-berkeley%2FCOMPSS-211a&urlpath=lab%2Ftree%2FCOMPSS-211a%2F)
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 
-This repository contains the materials for COMPSS 211a. We focus on practical tools and techniques in Python to collect, manage, and analyze data at scale. Key topics include:
+This repository contains the materials for COMPSS 211. We focus on practical tools and techniques in Python to collect, manage, and analyze data at scale. Key topics include:
 
 - Local Computing: Command-line operations and version control with Git / Github.
 - Data Acquisition: Using web APIs to retrieve data and web scraping/crawling to collect data when APIs aren’t available.
