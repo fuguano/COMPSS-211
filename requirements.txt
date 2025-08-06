@@ -1,0 +1,10 @@
+Beautifulsoup
+datasets
+nltk
+pandas
+requests
+scikit-learn
+seaborn
+spacy
+torch
+transformers
