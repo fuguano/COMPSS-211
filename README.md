@@ -1,6 +1,5 @@
 # COMPSS-211
 
-[![Datahub](https://img.shields.io/badge/launch-datahub-blue)](https://github.com/dlab-berkeley/R-LLMs-Exploratory-Research/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Fdlab-berkeley%2FCOMPSS-211a&urlpath=lab%2Ftree%2FCOMPSS-211a%2F)
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 
 This repository contains the materials for COMPSS 211. We focus on practical tools and techniques in Python to collect, manage, and analyze data at scale. Key topics include:
@@ -13,9 +12,29 @@ This repository contains the materials for COMPSS 211. We focus on practical too
 
 Throughout the course, students will apply these skills to real-world computational social science problems. We will use datasets to practice methods and ultimately drive a final project that tells a social science story with data. By the end, students will be equipped to fetch data from diverse sources, manage code collaboratively, leverage AI and cloud tools, and build end-to-end computational workflows.
 
-# DataHub Setup (Recommended)
-We *strongly* recommend using Datahub to run the materials for these lessons. You can access the DataHub by clicking the following button:
-[![Datahub](https://img.shields.io/badge/launch-datahub-blue)](https://github.com/dlab-berkeley/R-LLMs-Exploratory-Research/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Fdlab-berkeley%2FCOMPSS-211a&urlpath=lab%2Ftree%2FCOMPSS-211a%2F)
+
+# Codespace Setup (Recommended)
+
+You can run this course repository directly in your browser using GitHub Codespaces, without needing to install anything locally.
+
+## To launch:
+
+1. **Click the green “<> Code” button** near the top of this page.
+2. Select **“Open with Codespaces” → “New codespace.”**
+3. GitHub will launch a ready-to-use development environment where you can run notebooks and edit files.
+
+Once your Codespace is open, you can:
+
+- Open any `.ipynb` file and run code immediately
+- Use the terminal to run commands (e.g., `git pull` each week to get new materials)
+- Add your own notes or save code changes
+- Use Github copilot 
+
+> **Each week:** Simply open your existing Codespace and run `git pull` in the terminal to fetch the latest updates from the course repository. We will add each week’s materials in a new `/weekXX/` folder.
+
+> **Note:** Make sure to **commit and push your changes to your personal GitHub repo** if you want to save work between sessions, or download your work as `.ipynb` files when done.
+
+Let us know during class or office hours if you run into any issues using Codespaces. We’ll walk through this setup together in Week 1.
 
 # Local Setup
 Anaconda is a useful package management software that allows you to run Python and Jupyter notebooks easily. Installing Anaconda allows you to run the materials for this workshop on your local machine. If you would like to run Python on your own computer, complete the following steps prior to the workshop:
