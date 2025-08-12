@@ -1,7 +1,7 @@
 {
   "name": "COMPSS-211A devcontainer",
   "image": "mcr.microsoft.com/devcontainers/python:3.10",
-  "postCreateCommand": "bash -lc '\n  set -e\n  python -m venv .venv\n  . .venv/bin/activate\n  python -m pip install -U pip\n  [ -f requirements.txt ] && pip install -r requirements.txt || true\n  pip install jupyterlab ipykernel\n  python -m ipykernel install --user --name COMPSS-211A --display-name \"Python (COMPSS-211A)\"\n'",
+  "postCreateCommand": "bash -lc 'chmod +x .devcontainer/setup.sh || true; .devcontainer/setup.sh'",
   "customizations": {
     "vscode": {
       "extensions": [
