@@ -11,9 +11,10 @@
         "GitHub.copilot-chat"
       ],
       "settings": {
-        "jupyter.notebookFileRoot": "/workspaces/COMPSS-211A",
-        "python.defaultInterpreterPath": "/workspaces/COMPSS-211A/.venv/bin/python",
-        "python.terminal.activateEnvironment": true
+        "python.defaultInterpreterPath": "${containerWorkspaceFolder}/.venv/bin/python",
+        "python.terminal.activateEnvironment": true,
+        "jupyter.jupyterServerType": "local",
+        "jupyter.notebookFileRoot": "${containerWorkspaceFolder}"
       }
     }
   }
