@@ -10,7 +10,7 @@ uv venv .venv
 . .venv/bin/activate
 
 # Install CPU-only torch first
-uv pip install --index-url https://download.pytorch.org/whl/cpu torch>=2.2,<3
+uv pip install --index-url https://download.pytorch.org/whl/cpu "torch>=2.2,<3"
 
 # Install the rest of your deps from PyPI
 uv pip install -r requirements.txt
