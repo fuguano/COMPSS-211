@@ -12,6 +12,9 @@ export PATH="$HOME/.local/bin:$PATH"
 uv venv .venv
 . .venv/bin/activate
 
+# Install pip
+uv pip install -U pip
+
 # CPU-only torch (from CPU index only)
 uv pip install --index-url https://download.pytorch.org/whl/cpu "torch>=2.2,<3"
 
