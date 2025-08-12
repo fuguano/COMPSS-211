@@ -1,12 +1,7 @@
 {
-  "name": "COMPSS-211 devcontainer",
-  "image": "mcr.microsoft.com/devcontainers/python:3.11",
-  "features": {
-    "ghcr.io/devcontainers/features/python:1": {
-      "installJupyterlab": true
-    }
-  },
-  "postCreateCommand": "pip install -r requirements.txt",
+  "name": "COMPSS-211A devcontainer",
+  "image": "mcr.microsoft.com/devcontainers/python:3.10",
+  "postCreateCommand": "bash -lc '\n  set -e\n  python -m venv .venv\n  . .venv/bin/activate\n  python -m pip install -U pip\n  [ -f requirements.txt ] && pip install -r requirements.txt || true\n  pip install jupyterlab ipykernel\n  python -m ipykernel install --user --name COMPSS-211A --display-name \"Python (COMPSS-211A)\"\n'",
   "customizations": {
     "vscode": {
       "extensions": [
@@ -16,8 +11,9 @@
         "GitHub.copilot-chat"
       ],
       "settings": {
-        // Set the root for notebooks so VS Code doesn't create .virtual_documents
-        "jupyter.notebookFileRoot": "/workspaces/COMPSS-211"
+        "jupyter.notebookFileRoot": "/workspaces/COMPSS-211A",
+        "python.defaultInterpreterPath": "/workspaces/COMPSS-211A/.venv/bin/python",
+        "python.terminal.activateEnvironment": true
       }
     }
   }
