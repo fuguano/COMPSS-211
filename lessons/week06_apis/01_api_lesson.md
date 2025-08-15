@@ -4,7 +4,7 @@ Whenever you're trying to get information from the web, it's very important to f
 
 The UC Berkeley library has some excellent resources on this topic. Here is a flowchart that can help guide your course of action:
 
-![](../../../img/scraping_flowchart.png)
+![](../../img/scraping_flowchart.png)
 
 You can see the library's licensed sources [here](http://guides.lib.berkeley.edu/text-mining).
 
@@ -28,15 +28,15 @@ This workshop is about APIs. You may have heard this terminology in a variety of
 
 Consider a simple Google search:
 
-![](../../../img/google_search.png)
+![](../../img/google_search.png)
 
 Ever wonder what all that extra stuff in the address bar was all about?  In this case, the full address is Google's way of sending a query to its databases asking requesting information related to the search term "golden state warriors". 
 
-![](../../../img/google_link.png)
+![](../../img/google_link.png)
 
 In fact, it looks like Google makes its query by taking the search terms, separating each of them with a "+", and appending them to the link "https://www.google.com/#q=".  Therefore, we should be able to actually change our Google search by adding some terms to the URL and following the general format:
 
-![](../../../img/google_link_change.png)
+![](../../img/google_link_change.png)
 
 Using RESTful APIs is essentially formatting these URLs so that you can get the response you want.
 
@@ -81,7 +81,7 @@ The New York Times offers a treasure trove of data about their articles that is 
 
 For most APIs, a key or other user credentials are required for any database querying.  Generally, this requires that you register with the organization. Go to the [NYT Developer Page](http://developer.nytimes.com/) and create an account:
 
-![](../../../img/nytimes_start.png)
+![](../../img/nytimes_start.png)
 
 Most APIs are set up for developers, so you'll likely be asked to register an "application".  All this really entails is coming up with a name for your project, and providing your real name, organization, and email.  Note that some more popular APIs (e.g. Twitter, Facebook) will require additional information, such as a web address or mobile number.
 
@@ -97,10 +97,10 @@ Once you've successfully registered, you will be assigned one or more keys, toke
 
 4. You'll see the page where you'll be prompted to add a name for your App. You can call it anything. Then click enable on the APIs that are enabled in the screenshot. You can enable them all but make sure you at least enable the ones on the screenshot. 
 
-![](../../../img/nytimes_app.png)
+![](../../img/nytimes_app.png)
 
 5. You'll see an API key next to your App ID. Have that key ready to copy into the first notebook.
 
-![](../../../img/nytimes_key.png)
+![](../../img/nytimes_key.png)
 
 Proceed to the `lessons/01_api.ipynb` notebook with your API key to make some calls!
