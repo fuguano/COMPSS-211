@@ -88,7 +88,7 @@ Cloud: "Done. You only pay for the milliseconds it runs"
 ### Why Google Cloud?
 
 We're using Google Cloud Platform (GCP) because:
-- **Free tier**: $300 credit for new users (enough for the course)
+- **Free tier**: $300 credit for new users 
 - **Academic friendly**: Good documentation and educational resources
 - **Integration**: Works well with Colab and other Google services
 - **Global infrastructure**: Data centers worldwide
@@ -100,17 +100,7 @@ We're using Google Cloud Platform (GCP) because:
 3. **Cloud Shell**: Browser-based terminal
 4. **Cloud SDK**: Command-line tools
 
-### The GCP Hierarchy
-
-```
-Organization (Berkeley)
-    ↓
-Project (your-research-project)
-    ↓
-Resources (VMs, storage, etc.)
-```
-
-🥊 **3-1**: Visit [console.cloud.google.com](https://console.cloud.google.com) and explore the interface. What services do you see in the menu?
+Visit [console.cloud.google.com](https://console.cloud.google.com) and explore the interface. What services do you see in the menu?
 
 ---
 
@@ -134,17 +124,6 @@ Resources (VMs, storage, etc.)
 2. Name it: "compss211-yourname"
 3. Note your Project ID (you'll need this)
 ```
-
-### Setting Up Billing Alerts
-
-```bash
-# Navigate to: Billing → Budgets & alerts
-1. Create budget: $50 (monthly)
-2. Set alert at: 50%, 90%, 100%
-3. Add your email for notifications
-```
-
-🥊 **4-1**: Create a project and set up a $25 budget alert.
 
 ---
 
@@ -203,7 +182,7 @@ gcloud compute instances create llm-instance \
     --boot-disk-type=pd-standard
 ```
 
-🥊 **5-1**: Create an `e2-micro` instance (free tier eligible) in your nearest region.
+Create an `e2-micro` instance (free tier eligible) in your nearest region.
 
 ---
 
@@ -262,7 +241,7 @@ python3 --version       # Python version
 pip3 --version         # pip version
 ```
 
-🥊 **6-1**: SSH into your VM and check how much RAM and disk space you have.
+SSH into your VM and check how much RAM and disk space you have.
 
 ---
 
@@ -336,7 +315,7 @@ EOF
 python3 test_cloud.py
 ```
 
-🥊 **7-1**: Create and run a Python script that counts from 1 to 1 million and times how long it takes.
+Create and run a Python script that counts from 1 to 1 million and times how long it takes.
 
 ---
 
@@ -448,7 +427,7 @@ screen -r llm_training
 screen -ls
 ```
 
-🥊 **8-1**: Run a small language model and generate text about "computational social science".
+Run a small language model and generate text about "computational social science".
 
 ---
 
@@ -514,15 +493,7 @@ gcloud billing projects describe $(gcloud config get-value project)
 # (Do this in Console: Billing → Billing export)
 ```
 
-### Cost Estimation Exercise
-
-🥊 **9-1**: Calculate the cost of running these scenarios for 1 week:
-
-1. e2-micro instance running 24/7
-2. n2-standard-4 instance running 8 hours/day
-3. a2-highgpu-1g (with GPU) running 2 hours/day
-
-Use the [GCP Pricing Calculator](https://cloud.google.com/products/calculator).
+Tip: Use the [GCP Pricing Calculator](https://cloud.google.com/products/calculator).
 
 ---
 
@@ -629,105 +600,7 @@ for size in sizes:
     print(f"Size {size}x{size}: {time_taken:.2f} seconds")
 ```
 
-🥊 **11-1**: Run this benchmark locally and on your cloud VM. Compare the results.
-
-### Exercise 2: Collaborative Workflow
-
-Simulate a team project:
-
-1. Create a shared Cloud Storage bucket
-2. Upload a dataset
-3. Have a partner download and process it
-4. Upload results back
-
-```bash
-# Create bucket
-gsutil mb gs://compss211-shared-yourname
-
-# Upload data
-gsutil cp local_data.csv gs://compss211-shared-yourname/
-
-# Share with specific user
-gsutil iam ch user:partner@email.com:objectViewer gs://compss211-shared-yourname
-
-# Download on partner's VM
-gsutil cp gs://compss211-shared-yourname/local_data.csv ./
-```
-
-### Exercise 3: Automated Shutdown Script
-
-Create a script that monitors activity and shuts down when idle:
-
-```python
-# auto_shutdown.py
-import subprocess
-import time
-import psutil
-
-def is_idle(cpu_threshold=5, duration=300):
-    """Check if system is idle"""
-    idle_time = 0
-    
-    while idle_time < duration:
-        cpu_percent = psutil.cpu_percent(interval=1)
-        
-        if cpu_percent > cpu_threshold:
-            idle_time = 0  # Reset if active
-        else:
-            idle_time += 1
-            
-        time.sleep(1)
-    
-    return True
-
-# Monitor and shutdown if idle for 5 minutes
-if is_idle():
-    print("System idle, shutting down...")
-    subprocess.run(["sudo", "shutdown", "-h", "now"])
-```
-
----
-
-## 12. Alternative: GitHub Codespaces
-
-If you can't or don't want to use Google Cloud, GitHub Codespaces provides a similar experience:
-
-### What is Codespaces?
-
-- Cloud-based development environment
-- Runs in your browser
-- Free tier: 60 hours/month
-- Pre-configured with common tools
-
-### Setting Up Codespaces
-
-1. Go to any GitHub repository
-2. Click green "Code" button → "Codespaces" tab
-3. Click "Create codespace on main"
-4. Wait for environment to start
-5. You have a full VS Code environment in browser!
-
-### Running LLMs in Codespaces
-
-```bash
-# In Codespaces terminal
-pip install transformers torch
-
-# Create and run Python scripts just like on VM
-python run_model.py
-```
-
-### Codespaces vs Google Cloud
-
-| Feature | Codespaces | Google Cloud |
-|---------|------------|--------------|
-| **Setup** | One click | 10-15 minutes |
-| **Free tier** | 60 hrs/month | $300 credit |
-| **GPUs** | No | Yes |
-| **Customization** | Limited | Full control |
-| **Best for** | Development | Production |
-
-🥊 **12-1**: Create a Codespace for your project repository and run a simple Python script.
+Run this benchmark locally and on your cloud VM. Compare the results.
 
 ---
 
@@ -735,84 +608,21 @@ python run_model.py
 
 ### Key Takeaways
 
-✅ **Cloud Computing Essentials**
+**Cloud Computing Essentials**
 - Understand IaaS vs PaaS vs SaaS
 - Know when cloud beats local computing
 - Master basic VM management
 
-✅ **Practical Skills**
+**Practical Skills**
 - Launch and connect to VMs
 - Transfer files and run jobs
 - Monitor and control costs
 
-✅ **Professional Practices**
+**Professional Practices**
 - Always set billing alerts
 - Stop instances when not using
 - Choose appropriate instance sizes
 - Consider environmental impact
-
-### Cloud Computing Checklist
-
-Before starting a cloud project:
-
-- [ ] Estimate costs using pricing calculator
-- [ ] Set up billing alerts
-- [ ] Choose appropriate region (cost + carbon)
-- [ ] Select right-sized instances
-- [ ] Plan for data transfer costs
-- [ ] Set up auto-shutdown if needed
-- [ ] Document setup for reproducibility
-- [ ] Consider environmental impact
-
-### Common Pitfalls to Avoid
-
-❌ **Don't**:
-- Leave instances running 24/7 unnecessarily
-- Use GPUs for CPU-only tasks
-- Store sensitive data without encryption
-- Forget to delete resources after projects
-- Ignore billing notifications
-
-✅ **Do**:
-- Start small and scale up
-- Use preemptible instances for batch jobs
-- Keep backups of important data
-- Document your configuration
-- Share resources with team members
-
----
-
-## 14. Homework Assignment
-
-### HW7: Cloud Workflow Implementation
-
-**Part 1: Setup and Basic Operations** (40%)
-1. Create a GCP account and set up billing alerts
-2. Launch an e2-micro instance
-3. SSH into your instance and install Python packages
-4. Run the provided benchmark script
-5. Stop (not delete) your instance
-
-**Part 2: LLM in the Cloud** (40%)
-1. Start your instance
-2. Install transformers and run a small language model
-3. Generate text on three different topics
-4. Compare generation speed to your local machine
-5. Calculate the cost of your cloud usage
-
-**Part 3: Reflection** (20%)
-Write a 1-page reflection addressing:
-- When would you use cloud vs local computing?
-- What are the cost-benefit tradeoffs?
-- How do environmental concerns factor into your decision?
-
-**Submission**:
-- Screenshots of your GCP console showing instance and billing
-- Python script outputs from cloud runs
-- Reflection document
-- Total estimated cost for your usage
-
-**Due**: Week 13
 
 ---
 
@@ -835,17 +645,4 @@ Write a 1-page reflection addressing:
 
 ### Academic Resources
 - [Berkeley Research Computing](https://research-it.berkeley.edu/services/high-performance-computing)
-- [XSEDE (Free compute for researchers)](https://www.xsede.org/)
 - [Google Cloud Research Credits](https://edu.google.com/programs/credits/research/)
-
----
-
-## Next Week
-
-**Week 12: Containerization with Docker**
-- Building on cloud computing concepts
-- Creating reproducible environments
-- Deploying applications with containers
-- Combining Docker with cloud platforms
-
-Come prepared with your cloud experiences to discuss!
