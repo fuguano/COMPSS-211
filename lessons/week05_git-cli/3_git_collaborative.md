@@ -148,6 +148,13 @@ git push origin --delete branch-name
 * **Local:** To remove git tracking from a directory, delete the `.git` folder in the root directory. Note that `.git` directories are hidden by default. To delete everything (code and git history), simply delete the entire project directory.<br>
  
 * **Remote:** To delete a remote repository on GitHub, go to the repository Settings → scroll to "Danger Zone" → "Delete this repository". ⚠️ **Warning**: This action cannot be undone!<br>
+
+# Discussion
+
+- What Git workflow will your team use?
+- How will you handle merge conflicts when multiple people are working on the same dataset?
+- What's your plan when someone accidentally commits a 2GB dataset file?
+
  
 # Key Takeaways
 
