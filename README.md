@@ -4,7 +4,7 @@
 
 This repository contains the materials for COMPSS 211. We focus on practical tools and techniques in Python to collect, manage, and analyze data at scale. Key topics include:
 
-- Local Computing: Command-line operations and version control with Git / Github.
+- Local Computing: Command-line operations and version control with Git and Github.
 - Data Acquisition: Using web APIs to retrieve data and web scraping/crawling to collect data when APIs aren’t available.
 - Deployment / Remote Computing: Working with cloud and container technologies – for example, launching computations on Google Cloud and using Docker for reproducible environments. 
 - Natural Language Processing (NLP): Fundamental text processing and analysis techniques for social science data.
