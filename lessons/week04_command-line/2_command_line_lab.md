@@ -1,35 +1,60 @@
-# 🛠 Lab: Practical Bash for Computational Social Science
+# Lab: Practical Bash for Computational Social Science
 
-**Goal:** gain confidence using the command line to quickly inspect, transform, and organize files without needing Python for every task.
+**Goal:** Learn essential command line skills for navigating, inspecting, and manipulating files efficiently.
 
-**What you’ll need:**
-- Your terminal (mac/Linux, or WSL on Windows)
-- A folder `bash_lab/` with:
-  - `data/` (10–20 small `.csv` files, some `.json`)
-  - `logs/` (`app_YYYY.log` with some lines containing `ERROR`, `WARN`)
-  - `docs/` (`.md` files with `http:` links, some `https:`)
-  - Some files with spaces in names
+**Setup:**
+- Your terminal (Mac/Linux, or WSL on Windows)
+- The provided `bash_lab/` folder containing:
+  - `data/` (CSV and JSON files)
+  - `logs/` (log files with various messages)
+  - `docs/` (markdown documentation files)
 
-### Part 1: Navigation + inspection
-1. Print your current directory path.
-2. List all files in `data/` showing sizes in human-readable format.
-3. Count the number of `.csv` files in `data/`.
-4. Count total lines across all `.csv` files in `data/`.
+## Core Tasks
 
-### Part 2: Searching + filtering  
-5. Find all lines containing "ERROR" (case-insensitive) in `logs/*.log`.
-6. Count how many lines contain "ERROR" in all log files.
-7. Search for "ERROR" with line numbers shown.
+### Part 1: Basic Navigation
+1. Print your current directory path
+2. Navigate to the `bash_lab` folder
+3. List all files and folders
+4. List files in `data/` with file sizes
 
-### Part 3: Safe batch operations
-8. Find all files with spaces in their names under `docs/`.
-9. Rename them to use underscores (preview first, then apply).
-10. Replace `http:` with `https:` in all `.md` files in `docs/`.
+### Part 2: File Inspection
+5. Display the first 5 lines of any CSV file in `data/`
+6. Display the last 5 lines of any log file in `logs/`
+7. Count the number of lines in `data/sample.csv`
+8. Count how many CSV files are in the `data/` folder
 
-### Part 4: Automation
-11. Create a simple script that counts lines in all `.csv` files.
-12. Find all `.json` files and pass them to `xargs echo` to see the list.
+### Part 3: Basic Searching
+9. Search for the word "ERROR" in any log file
+10. Count how many times "ERROR" appears in `logs/app_2024.log`
+11. Find all JSON files in the `data/` folder
+12. Display all markdown files in the `docs/` folder
 
-**Live Check-off:**
-- A text file `lab_commands.txt` with the exact commands you ran, in order.
-- Short comments (`# like this`) explaining why you used each command.
+### Part 4: Simple File Operations
+13. Create a new directory called `backup`
+14. Copy one CSV file to the `backup` folder
+15. Create a text file listing all CSV filenames in `data/`
+
+## Stretch Goals
+
+### Advanced Searching
+- Find all lines containing "ERROR" (case-insensitive) across ALL log files
+- Search for "ERROR" and show line numbers
+- Find lines that contain both "ERROR" and "2024"
+
+### File Manipulation
+- Count total lines across all CSV files combined
+- Find all files with spaces in their names
+- Rename files with spaces to use underscores (test with echo first!)
+- Replace all instances of `http:` with `https:` in markdown files
+
+### Automation
+- Create a bash script that counts lines in each CSV file
+- Use `xargs` to process multiple files at once
+- Write a one-liner that finds the largest CSV file by line count
+- Create a script that generates a summary report of all log errors
+
+## Deliverables
+Submit a text file `lab_commands.txt` containing:
+- The commands you used for each core task
+- Brief comments explaining what each command does
+- Any stretch goals you completed
