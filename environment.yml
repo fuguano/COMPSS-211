@@ -1,0 +1,35 @@
+name: dh-nlp
+channels:
+  - conda-forge
+
+dependencies:
+  - python=3.11
+  - pip
+
+  # core scientific + viz
+  - numpy
+  - scipy
+  - pandas>=2.2,<3
+  - scikit-learn>=1.5,<2
+  - seaborn>=0.13,<1
+
+  # nlp + parsing
+  - spacy>=3.8,<4
+  - nltk>=3.8,<4
+  - beautifulsoup4>=4.12,<5
+  - requests>=2.32,<3
+
+  # io / scraping / pdf
+  - trafilatura>=2.0,<3
+  - pymupdf>=1.24,<2
+
+  # topic modeling deps that BERTopic uses
+  - gensim>=4.3,<5
+  - umap-learn
+  - hdbscan
+
+  # keep transformers/datasets/bertopic in pip for freshness
+  - pip:
+      - datasets>=4.0.0,<5
+      - transformers>=4.43,<5
+      - bertopic>=0.17.3,<1
