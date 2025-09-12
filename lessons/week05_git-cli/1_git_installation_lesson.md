@@ -1,9 +1,6 @@
 # Installing Git on Your Computer
 
-In this workshop, we will be working with a version control software called
-`git`.
-
-First, let's make sure you have `git` installed. You can find general install
+Before we get started, let's make sure you have `git` installed. You can find general install
 instructions on [Github](https://github.com/git-guides/install-git). The
 approach depends on your operating system:
 
@@ -17,6 +14,8 @@ approach depends on your operating system:
 * **Linux:** You can use whatever package management system your distribution
   uses to install `git`. For Debian/Ubuntu, this is `apt`. Specifically, run the
   command `sudo apt-get install git-all` in a terminal.
+
+*Note:* if you are working from Github Codespaces, git shold already be installed.
 
 # Creating a Github Account
 

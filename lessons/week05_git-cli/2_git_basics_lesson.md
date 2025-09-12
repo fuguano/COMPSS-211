@@ -11,9 +11,6 @@
 🥊 **Challenge**: Interactive excersise. We'll work through these in the workshop!<br>
 💡 **Tip**: How to do something a bit more efficiently or effectively.<br>
  ⚠️ **Warning:** Heads-up about tricky stuff or common mistakes.<br>
-📝 **Poll:** A Zoom poll to help you learn!<br>
-🎬 **Demo**: Showing off something more advanced <br>
-
 
 ## Version Control<br>
 🔔**Question**: Have you ever made a mistake of overwriting a file or saving the wrong version?<br>
