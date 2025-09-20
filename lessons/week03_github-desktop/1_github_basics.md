@@ -88,6 +88,8 @@ So, even in the personal workflow, there's a lot of individual steps needed just
 In the collaborative workflow, multiple people may be working on the same repository at the same time. So we need to have a system in place for how to decide whose changes to add, and how to handle scenarios when changes may clash with each other.<br>
  
 Collaborative workflows heavily rely on **branching**. A branch in Git (and GitHub) is a separate line of development within a repository. It allows you to work on new features, bug fixes, or experiments without affecting the main codebase. We've already seen this terminology in the context of the `main` branch. <br> 
+
+Think of branches like **alternate versions** of the same folder. When you switch to a new branch, the files on your computer instantly change to match that version. It’s like flipping between parallel universes of your project, where each one has different contents.
  
 Now, we might be interested in adding a new feature to a code repository. When working collaboratively, we create a **branch** off the `main` repository. This branch can be updated in parallel, without modifying the `main` branch. When we've committed all the changes to the feature branch, how do we go about incorporating them into the`main` branch? <br>
 
@@ -127,15 +129,15 @@ GitHub provides a very nice platform to handle PRs - users can view the PRs, com
  
 The process of merging the changes in this way allows people to work in parallel on the `main` repo without modifying the `main` branch. Couple this with GitHub's platform for handling PRs, and you have a powerful tool for incorporating parallel changes into a repository.<br>
  
-Let's give this a shot! You are going to make a change to an existing repository and submit a pull request for it. We'll be working in a repository called `Git-Playground` which is available on the D-Lab GitHub at [this link](https://github.com/dlab-berkeley/Git-Playground).<br>
+Let's give this a shot! You are going to make a change to an existing repository and submit a pull request for it. 
  
 Go to your forked `Git-Playground` repository on GitHub. GitHub can already tell you made a change, and gives you the option to make a pull request! Click `Contribute` andn `Open pull request`. If you don't see this button, no worries - go to the "Pull Requests" button next to Issues, and you can manually make one there. Follow the instructions for making the pull request, and we'll merge a couple of them!<br>
 
-🎬 **Demo**: We will try to respond to a "Pull Request" with a conflict with changes I made. 
-
 # Removing git repositories<br>
  
-* **Local:** If you want to delete local git-related information (like  branches and versions), all you have to do is delete the `.git` directory in  the root-directory of your repository. Note that `.git` directories are hidden  by default, so you'll need to be able to view hidden files to delete it.  If you want to delete everything (data, code, etc.), just delete the whole  directory.<br>
+* **Local:** If you want to delete local git-related information (like branches and versions), all you have to do is delete the `.git` directory in the root-directory of your repository. Note that `.git` directories are hidden  by default, so you'll need to be able to view hidden files to delete it.  If you want to delete everything (data, code, etc.), just delete the whole directory.<br>
+
+In GitHub Desktop, you can delete branches by right-clicking on a branch name in Branches and selecting "Delete.."<br>
  
 * **Remote:** If you want to delete a remote repository, navigate to GitHub and go to Settings, then Danger Zone (at the bottom of the Settings page). Warning:Once you delete a repository, there is no going back.<br>
  
