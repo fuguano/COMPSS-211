@@ -20,30 +20,40 @@ In this lesson, you'll work in groups to set up a collaborative final project re
 
 ## Step 1: Creating Your Project Repository from Template
 
-One person in your group should be designated as the repository owner and follow these steps:
+### Creating a Team
 
-1. **Navigate to the template repository**: Go to the [GitHub repository](https://github.com/compss211/final-project-template-repo) for the final project template.
-2. **Create a new repository from template**: Click the green "Use this template" button, then select "Create a new repository"
-3. **Choose repository settings**:
-   - **Repository name**: Choose a meaningful name that reflects your project (e.g., `climate-data-analysis`, `social-media-sentiment`, `movie-recommendation-system`)
+**One person in your group** should be designated as the repository owner and follow these steps:
+
+1. Open the GitHub Classroom invitation link.
+2. Click **"Create a new team"**.
+3. Choose a clear team name that includes the team number (e.g. "TEAM 2: Economic Sentiment & Brand Performance").
+4. After creating the team, GitHub Classroom will automatically provision a **team repository** from the template.  
+ - The repository is private to your team and instructors.  
+ - It will contain the starter code and instructions.
+5. **Choose repository settings**:
    - **Description**: Add a short, useful description of what your project will accomplish
-   - **Visibility**: Keep it public (this allows for easier collaboration)
-4. Click "Create repository from template"
 
-💡 **Tip**: Choose a descriptive repository name that clearly indicates your project's purpose. Avoid generic names like "final-project" or "group-3-project".
+### Joining an Existing Team
 
-### Adding Collaborators
+The remaining members of the group should:
 
-Once your repository is created, the owner needs to add all group members as collaborators:
+1. Open the **same GitHub Classroom invitation link**
+2. Instead of creating a new team, select the team that their teammate just created.  
+3. Confirm to join. Once accepted, you’ll be added as a collaborator on the team repository.  
 
-1. **Navigate to repository settings**: In your new repository, click on the "Settings" tab
-2. **Go to Collaborators**: In the left sidebar, click "Collaborators and teams"
-3. **Add collaborators**: Click "Add people" and enter each group member's GitHub username
-4. **Set permissions**: Give collaborators "Write" access (this allows them to push changes directly)
+### Verifying Your Team
 
-🔔 **Question**: Why do you think we're giving everyone "Write" access instead of requiring pull requests for everything?
+- After all members have joined, check that everyone has access to the same repository.  
+- You should all see the same repo under your **GitHub Classroom assignments**.  
+- The instructor dashboard will reflect your team membership and submission status.
 
-⚠️ **Warning**: Make sure all group members have accepted the collaboration invitation before proceeding to the next steps.
+## Notes
+
+- Only **one student per group** should create a team. Everyone else should join that team.  
+- If you accidentally create a duplicate team, let your instructor know so it can be cleaned up.  
+- You can commit and push code directly to your shared team repo once you are added.  
+
+⚠️ **Warning**: Make sure all group members are members of the project repo before proceeding to the next steps.
 
 ## Step 2: Understanding Your Repository Structure
 
