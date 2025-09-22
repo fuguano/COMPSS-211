@@ -20,30 +20,38 @@ In this lesson, you'll work in groups to set up a collaborative final project re
 
 ## Step 1: Creating Your Project Repository from Template
 
-One person in your group should be designated as the repository owner and follow these steps:
+### Creating a Team
 
-1. **Navigate to the template repository**: Go to the [GitHub repository](https://github.com/compss211/final-project-template-repo) for the final project template.
-2. **Create a new repository from template**: Click the green "Use this template" button, then select "Create a new repository"
-3. **Choose repository settings**:
-   - **Repository name**: Choose a meaningful name that reflects your project (e.g., `climate-data-analysis`, `social-media-sentiment`, `movie-recommendation-system`)
-   - **Description**: Add a short, useful description of what your project will accomplish
-   - **Visibility**: Keep it public (this allows for easier collaboration)
-4. Click "Create repository from template"
+**One person in your group** creates the team following the steps below:
 
-💡 **Tip**: Choose a descriptive repository name that clearly indicates your project's purpose. Avoid generic names like "final-project" or "group-3-project".
+1. Open the GitHub Classroom invitation link and click "Accept this assignment".
+2. Click **Create or join a team → Create a new team** (only one teammate does this).
+3. Team names must follow a naming convention: use lowercase, separate words with dashes, and include both team number and project subject (e.g., team-2-brand-performance).
+4. After creating the team, GitHub Classroom will automatically provision a **team repository** from the template.  
+ - The repository is private to your team and instructors.  
+ - It will contain the starter code and instructions.
 
-### Adding Collaborators
+### Joining an Existing Team
 
-Once your repository is created, the owner needs to add all group members as collaborators:
+The remaining members of the group should:
 
-1. **Navigate to repository settings**: In your new repository, click on the "Settings" tab
-2. **Go to Collaborators**: In the left sidebar, click "Collaborators and teams"
-3. **Add collaborators**: Click "Add people" and enter each group member's GitHub username
-4. **Set permissions**: Give collaborators "Write" access (this allows them to push changes directly)
+1. Open the **same GitHub Classroom invitation link**
+2. Instead of creating a new team, select the team that their teammate just created.  
+3. Confirm to join. Once accepted, you’ll be added as a collaborator on the team repository.  
 
-🔔 **Question**: Why do you think we're giving everyone "Write" access instead of requiring pull requests for everything?
+### Verifying Your Team
 
-⚠️ **Warning**: Make sure all group members have accepted the collaboration invitation before proceeding to the next steps.
+- After all members have joined, check that everyone has access to the same repository.  
+- You should all see the same repo under your **GitHub Classroom assignments**.  
+- The instructor dashboard will reflect your team membership and submission status.
+
+## Notes
+
+- Only **one student per group** should create a team. Everyone else should join that team.  
+- If you accidentally create a duplicate team, let your instructor know so it can be cleaned up.  
+- You can commit and push code directly to your shared team repo once you are added.  
+
+⚠️ **Warning**: Make sure all group members are members of the project repo before proceeding to the next steps.
 
 ## Step 2: Understanding Your Repository Structure
 
@@ -79,7 +87,7 @@ your-project-repo/
 - Documenting your thought process
 - Presenting results with narrative text
 
-**`data/` folder**: Store your datasets here, though remember not to commit large data files to git (we'll cover this more in future lessons).
+**`data/` folder**: Store your datasets here, though remember not to commit large data files to git (we'll cover this more in future lessons). Anything over 20MB should be uploaded elsewhere.
 
 🔔 **Question**: What's the key difference between scripts and notebooks?
 
@@ -105,13 +113,13 @@ Now that your repository is set up and all collaborators have been added, everyo
    - Choose where you want to store the project on your computer
    - Click `Clone`
 
-**Note**: If you prefer to work in GitHub Codespaces instead of locally, you can set that up later. Note that, if you want to use git, you'll have to do so on the command line. We will study that next week!
+**Note**: If you prefer to work in GitHub Codespaces instead of locally, you can set that up later. Note that, if you want to use git, you can use the built-in VS Code Source Control panel or the terminal. We will study the terminal next week!
 
 ⚠️ **Warning**: Make sure everyone successfully clones the repository before moving to the next step. If someone can't see the repository, check that they've accepted the collaboration invitation.
 
 ## Step 4: Taking Turns Creating Scripts
 
-Now for some hands-on practice! Each group member will take turns creating a Python script, committing it, pushing the changes, and verifying it appears on GitHub. This exercise will reinforce the basic Git workflow you learned in `1_github_basics.md` and give you practice creating scripts.
+Now for some hands-on practice! Each group member will take turns creating a Python script, committing it, pushing the changes, and verifying it appears on GitHub. This exercise will reinforce the basic Git workflow you learned in `1_github_basics.md` and give you practice creating scripts. If you get ‘behind,’ click `Fetch/Pull origin` before committing.
 
 ### The Exercise Process
 

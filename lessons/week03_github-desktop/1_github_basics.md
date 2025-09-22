@@ -14,10 +14,6 @@
  ⚠️ **Warning:** Heads-up about tricky stuff or common mistakes.<br>
 📝 **Poll:** A Zoom poll to help you learn!<br>
 🎬 **Demo**: Showing off something more advanced <br>
-
-
- 
-
  
 ## Version Control<br>
  🔔**Question**: Have you ever made a mistake of overwriting a file or saving the wrong version?<br>
@@ -31,7 +27,7 @@ If you have used Google Docs, you likely have already used version control. Goog
 ## Git Workflows: Personal Workflow
 There are a variety of workflows you may employ when using Git to track your changes. The most common, particularly for academic settings, is the **personal workflow**.
 
-<br><img src="../../../img/personal.png" alt="forking" width="50%">
+<br><img src="../../img/personal.png" alt="forking" width="50%">
 
 In the personal workflow, you are largely going to be the only person adding to the repository. You have one **branch**, or version of your project. It is called the `main` branch. Every time you make changes to the code, you'll add them to the `main` branch. 
 
@@ -50,7 +46,7 @@ A **repository** (or repo for short) is a central place where all the files rela
 We need to make a distinction between two kinds of repositories: there's the local repository and the remote repository. **The local repository** is the version of the code that is stored on your computer. **The remote repository**, meanwhile, is any version of the repository that lies on some other machine. In this context, remote repository is almost always going to refer to the version that is on on GitHub's servers. <br>
 
 So, when we're making changes to a repository, there's two versions that need to stay in sync with each other: the local and the remote. The steps we outline keep track of those changes between both cases, while also keeping track of the entire history. GitHub provides a nice platform on which we can peruse the history of a repository.<br>
-<br><img src="../../../img/workflow.png" alt="forking" width="50%"><br>
+<br><img src="../../img/workflow.png" alt="forking" width="50%"><br>
 
 1. **Commit**: Save your selected changes with a description.
 2. **Push**: Upload your saved changes to GitHub for others to see.
@@ -92,6 +88,8 @@ So, even in the personal workflow, there's a lot of individual steps needed just
 In the collaborative workflow, multiple people may be working on the same repository at the same time. So we need to have a system in place for how to decide whose changes to add, and how to handle scenarios when changes may clash with each other.<br>
  
 Collaborative workflows heavily rely on **branching**. A branch in Git (and GitHub) is a separate line of development within a repository. It allows you to work on new features, bug fixes, or experiments without affecting the main codebase. We've already seen this terminology in the context of the `main` branch. <br> 
+
+Think of branches like **alternate versions** of the same folder. When you switch to a new branch, the files on your computer instantly change to match that version. It’s like flipping between parallel universes of your project, where each one has different contents.
  
 Now, we might be interested in adding a new feature to a code repository. When working collaboratively, we create a **branch** off the `main` repository. This branch can be updated in parallel, without modifying the `main` branch. When we've committed all the changes to the feature branch, how do we go about incorporating them into the`main` branch? <br>
 
@@ -99,15 +97,15 @@ Now, we might be interested in adding a new feature to a code repository. When w
 * **Branches** are within the same repository. Branches make it easier collaboration among team members who have access to the repository. <br>
 * **Forks** create a completely separate copy of the repository, which is useful for outside contributors.
 
-<br><img src="../../../img/collaborative.png" alt="forking" width="50%">
+<br><img src="../../img/collaborative.png" alt="forking" width="50%">
  
 ### 1. **Forking the Repository** 
 An extra step you can take when working on a collaborative repository is to **fork** the repo. This creates a copy of the repository on your own GitHub account, which you're free to change at will. You can still, however, pull changes from the original repo, and make pull requests with your own changes. Go ahead and fork the repo [`Git-Playground`](https://github.com/dlab-berkeley/Git-Playground). See the image below for where to find the button:<br>
-<img src="../../../img/fork.png" alt="forking" width="50%"><br>
+<img src="../../img/fork.png" alt="forking" width="50%"><br>
 
  If you try to commit on a repository that you don't have access to, GitHub Desktop will ask you to create a fork.  <br>
 
-<br><img src="../../../img/fork2.png" alt="forking" width="50%"><br>
+<br><img src="../../img/fork2.png" alt="forking" width="50%"><br>
 
 ### 2. **Cloning** 
 Cloning a repository means taking a remote repository, and copying it to our local machine to create a local repository. Under `Current Repository`, click `add` and select `Clone Repository`. You can clone your own repository or any publically avaialable repository.  
@@ -131,15 +129,15 @@ GitHub provides a very nice platform to handle PRs - users can view the PRs, com
  
 The process of merging the changes in this way allows people to work in parallel on the `main` repo without modifying the `main` branch. Couple this with GitHub's platform for handling PRs, and you have a powerful tool for incorporating parallel changes into a repository.<br>
  
-Let's give this a shot! You are going to make a change to an existing repository and submit a pull request for it. We'll be working in a repository called `Git-Playground` which is available on the D-Lab GitHub at [this link](https://github.com/dlab-berkeley/Git-Playground).<br>
+Let's give this a shot! You are going to make a change to an existing repository and submit a pull request for it. 
  
 Go to your forked `Git-Playground` repository on GitHub. GitHub can already tell you made a change, and gives you the option to make a pull request! Click `Contribute` andn `Open pull request`. If you don't see this button, no worries - go to the "Pull Requests" button next to Issues, and you can manually make one there. Follow the instructions for making the pull request, and we'll merge a couple of them!<br>
 
-🎬 **Demo**: We will try to respond to a "Pull Request" with a conflict with changes I made. 
-
 # Removing git repositories<br>
  
-* **Local:** If you want to delete local git-related information (like  branches and versions), all you have to do is delete the `.git` directory in  the root-directory of your repository. Note that `.git` directories are hidden  by default, so you'll need to be able to view hidden files to delete it.  If you want to delete everything (data, code, etc.), just delete the whole  directory.<br>
+* **Local:** If you want to delete local git-related information (like branches and versions), all you have to do is delete the `.git` directory in the root-directory of your repository. Note that `.git` directories are hidden  by default, so you'll need to be able to view hidden files to delete it.  If you want to delete everything (data, code, etc.), just delete the whole directory.<br>
+
+In GitHub Desktop, you can delete branches by right-clicking on a branch name in Branches and selecting "Delete.."<br>
  
 * **Remote:** If you want to delete a remote repository, navigate to GitHub and go to Settings, then Danger Zone (at the bottom of the Settings page). Warning:Once you delete a repository, there is no going back.<br>
  

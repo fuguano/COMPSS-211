@@ -12,7 +12,6 @@ This repository contains the materials for COMPSS 211. We focus on practical too
 
 Throughout the course, students will apply these skills to real-world computational social science problems. We will use datasets to practice methods and ultimately drive a final project that tells a social science story with data. By the end, students will be equipped to fetch data from diverse sources, manage code collaboratively, leverage AI and cloud tools, and build end-to-end computational workflows.
 
-
 # Codespace Setup (Recommended)
 
 You can run this course repository directly in your browser using GitHub Codespaces, without needing to install anything locally.
