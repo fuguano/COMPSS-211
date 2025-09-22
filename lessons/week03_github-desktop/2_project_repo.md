@@ -169,6 +169,10 @@ print(f"My favorite number times 2 is: {result}")
 
 Now that everyone has practiced the basic workflow, let's explore the collaborative workflow using branches and pull requests.
 
+Branches are used to keep work organized and separate until it’s ready to merge:
+- Feature branches: Each new feature or contribution usually gets its own branch (e.g., login-page, data-cleaning).
+- Bug fix branches: Small, focused branches for fixing specific issues (e.g., fix-typo-readme).
+- Experiment branches: Sometimes people create a branch just to try out an idea without affecting the main project.
 
 **Each group member should do the following exercise:**
 
@@ -215,6 +219,18 @@ Now that everyone has practiced the basic workflow, let's explore the collaborat
    - If you're the repository owner, you can click "Merge pull request" to accept it
 
 ⚠️ **Warning**: Don't merge your own pull request - have someone else in your group review and merge it for you. This simulates real-world collaborative practices.
+
+
+## Updating and Deleting Branches
+
+As you work with branches, you’ll often need to update them with the latest changes from main, or clean them up once they’ve been merged.
+
+**Updating a branch:** In GitHub Desktop, switch to the branch you want to update. Then, click `Branch → Update from main`. This brings in any new commits from main so your branch stays up to date.
+
+**Deleting a branch:** After a branch has been merged into main (through a pull request), it’s good practice to delete it so your repository doesn’t get cluttered. In GitHub Desktop, switch back to main, then click `Branch → Delete…` and choose the branch you want to remove.
+
+Once a branch’s work is finished and merged into main, the branch is usually deleted. This keeps the project tidy and encourages everyone to keep work focused and modular.
+
 
 ## What's Next?
 
