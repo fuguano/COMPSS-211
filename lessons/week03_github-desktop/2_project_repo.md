@@ -2,7 +2,7 @@
 # Setting Up Your Final Project Repository
 
 **_Learning Objectives_:**  
-1. Learn to create a collaborative project repository from a template
+1. Learn to create a collaborative project repository
 2. Understand project repository structure and organization
 3. Practice collaborative Git workflows including branching and pull requests
 4. Experience the full cycle of collaborative development using GitHub Desktop<br>
