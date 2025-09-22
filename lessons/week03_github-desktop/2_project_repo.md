@@ -22,16 +22,14 @@ In this lesson, you'll work in groups to set up a collaborative final project re
 
 ### Creating a Team
 
-**One person in your group** should be designated as the repository owner and follow these steps:
+**One person in your group** creates the team following the steps below:
 
-1. Open the GitHub Classroom invitation link.
-2. Click **"Create a new team"**.
-3. Choose a clear team name that includes the team number (e.g. "TEAM 2: Economic Sentiment & Brand Performance").
+1. Open the GitHub Classroom invitation link and click "Accept this assignment".
+2. Click **Create or join a team → Create a new team** (only one teammate does this).
+3. Team names must follow a naming convention: use lowercase, separate words with dashes, and include both team number and project subject (e.g., team-2-brand-performance).
 4. After creating the team, GitHub Classroom will automatically provision a **team repository** from the template.  
  - The repository is private to your team and instructors.  
  - It will contain the starter code and instructions.
-5. **Choose repository settings**:
-   - **Description**: Add a short, useful description of what your project will accomplish
 
 ### Joining an Existing Team
 
@@ -89,7 +87,7 @@ your-project-repo/
 - Documenting your thought process
 - Presenting results with narrative text
 
-**`data/` folder**: Store your datasets here, though remember not to commit large data files to git (we'll cover this more in future lessons).
+**`data/` folder**: Store your datasets here, though remember not to commit large data files to git (we'll cover this more in future lessons). Anything over 20MB should be uploaded elsewhere.
 
 🔔 **Question**: What's the key difference between scripts and notebooks?
 
@@ -115,13 +113,13 @@ Now that your repository is set up and all collaborators have been added, everyo
    - Choose where you want to store the project on your computer
    - Click `Clone`
 
-**Note**: If you prefer to work in GitHub Codespaces instead of locally, you can set that up later. Note that, if you want to use git, you'll have to do so on the command line. We will study that next week!
+**Note**: If you prefer to work in GitHub Codespaces instead of locally, you can set that up later. Note that, if you want to use git, you can use the built-in VS Code Source Control panel or the terminal. We will study the terminal next week!
 
 ⚠️ **Warning**: Make sure everyone successfully clones the repository before moving to the next step. If someone can't see the repository, check that they've accepted the collaboration invitation.
 
 ## Step 4: Taking Turns Creating Scripts
 
-Now for some hands-on practice! Each group member will take turns creating a Python script, committing it, pushing the changes, and verifying it appears on GitHub. This exercise will reinforce the basic Git workflow you learned in `1_github_basics.md` and give you practice creating scripts.
+Now for some hands-on practice! Each group member will take turns creating a Python script, committing it, pushing the changes, and verifying it appears on GitHub. This exercise will reinforce the basic Git workflow you learned in `1_github_basics.md` and give you practice creating scripts. If you get ‘behind,’ click `Fetch/Pull origin` before committing.
 
 ### The Exercise Process
 
