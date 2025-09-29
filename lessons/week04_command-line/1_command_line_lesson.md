@@ -92,6 +92,8 @@ Your prompt shows where you are in the system. The dollar sign ($) indicates whe
 
 ### Reference: Keyboard Shortcuts
 
+The command line can feel archaic, but remembering some keyboard shortcuts can help you speed things up.
+
 * **Navigation**: Up/down arrows for command history
 * `Ctrl-C`: Stop current command
 * `Ctrl-L`: Clear screen
