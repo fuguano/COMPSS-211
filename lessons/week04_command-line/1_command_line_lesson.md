@@ -65,21 +65,6 @@ Your prompt shows where you are in the system. The dollar sign ($) indicates whe
 
 ---
 
-## Reference: Keyboard Shortcuts
-
-* **Navigation**: Up/down arrows for command history
-* `Ctrl-C`: Stop current command
-* `Ctrl-L`: Clear screen
-* `Ctrl-A`: Go to start of line
-* `Ctrl-E`: Go to end of line
-* `Ctrl-R`: Search through your command history interactively.
-* `Option-Arrow Keys`: Move the cursor word by word instead of character by character.
-* `Control-U`: Delete everything on the line before the cursor.
-* `Control-K`: Delete everything on the line after the cursor.
-* `Tab`: Autocomplete filenames and commands
-
----
-
 ## 3. Navigating File system
 
 ### Working Directory
@@ -104,6 +89,21 @@ Your prompt shows where you are in the system. The dollar sign ($) indicates whe
 * **Relative paths** don't start with `/` (from current directory)
 
 🥊**3-1**: Navigate to the downloaded workshop folder, then go into `bash_lab/data`, then back home using `cd ~`. <br>
+
+### Reference: Keyboard Shortcuts
+
+* **Navigation**: Up/down arrows for command history
+* `Ctrl-C`: Stop current command
+* `Ctrl-L`: Clear screen
+* `Ctrl-A`: Go to start of line
+* `Ctrl-E`: Go to end of line
+* `Ctrl-R`: Search through your command history interactively.
+* `Option-Arrow Keys`: Move the cursor word by word instead of character by character.
+* `Control-U`: Delete everything on the line before the cursor.
+* `Control-K`: Delete everything on the line after the cursor.
+* `Tab`: Autocomplete filenames and commands
+
+---
 
 ### Finding Files with `find`
 The `find` command searches for files and directories recursively:<br>
