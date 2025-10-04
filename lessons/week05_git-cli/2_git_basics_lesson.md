@@ -73,7 +73,7 @@ When you:
 ## Git Workflows: Personal Workflow
 There are a variety of workflows you may employ when using Git to track your changes. The most common, particularly for academic settings, is the **personal workflow**.
 
-<br><img src="../../../img/personal.png" alt="forking" width="50%">
+<br><img src="../../img/personal.png" alt="forking" width="50%">
 
 In the personal workflow, you are largely going to be the only person adding to the repository. You have one **branch**, or version of your project. It is called the `main` branch. Every time you make changes to the code, you'll add them to the `main` branch. 
 
@@ -90,14 +90,14 @@ A **repository** (or repo for short) is a central place where all the files rela
 We need to make a distinction between two kinds of repositories: there's the local repository and the remote repository. **The local repository** is the version of the code that is stored on your computer. **The remote repository**, meanwhile, is any version of the repository that lies on some other machine. In this context, remote repository is almost always going to refer to the version that is on on GitHub's servers. <br>
 
 So, when we're making changes to a repository, there's two versions that need to stay in sync with each other: the local and the remote. The steps we outline keep track of those changes between both cases, while also keeping track of the entire history. GitHub provides a nice platform on which we can peruse the history of a repository.<br>
-<br><img src="../../../img/workflow.png" alt="forking" width="50%"><br>
+<br><img src="../../img/workflow.png" alt="forking" width="50%"><br>
 
 1. **Commit**: Save your selected changes with a description.
 2. **Push**: Upload your saved changes to GitHub for others to see.
 3. **Pull**: Download the latest updates from GitHub to your project.
 
 For Git from command line, there are two more command you will use: `add` and `status`
-<br><img src="../../../img/committing.jpeg" alt="forking" width="50%"><br>
+<br><img src="../../img/committing.jpeg" alt="forking" width="50%"><br>
 
 Let's go through the process of making changes to a repository, step by step.<br>
  
