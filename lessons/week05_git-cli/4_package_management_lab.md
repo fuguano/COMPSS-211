@@ -57,7 +57,7 @@ Conda has some real advantages over other tools like pip:
 
 ## Setting Up Conda
 
-You have several options for installing Conda depending on your system:
+If you have not done so yet, you have several options for installing Conda depending on your system:
 
 ### Option 1: Windows Users - Direct Download
 1. Go to [https://conda.io/miniconda.html](https://conda.io/miniconda.html)
