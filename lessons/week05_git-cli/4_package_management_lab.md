@@ -118,14 +118,15 @@ Adding new packages to your environment is simple:
 conda install package_name
 ```
 
-🥊 **Challenge**: Let's install IPython, an enhanced Python shell with better features:
+Let's first install `ipykernel`, which acts as the backend engine that executes Python code in Jupyter Notebooks. It's built on IPython, an enhanced interactive Python shell.
 
 ```bash
 conda activate compss211
-conda install ipython
+conda install ipykernel
 ```
 
-After installation, try it out:
+🥊 **Challenge**: Let's try out IPython on the command line:
+
 ```bash
 ipython
 ```
